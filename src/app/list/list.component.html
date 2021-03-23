@@ -1,0 +1,24 @@
+<table id="customers">
+    <tr>
+        <td><b>ID</b></td>
+        <td><b>Name</b></td>
+        <td><b>Age</b></td>
+        <td><b>Gender</b></td>
+        <td><b>Father/Husband</b></td>
+        <td><b>Address</b></td>
+    </tr>
+    <tr *ngFor="let data of usersData">
+        <td>{{data.id}}</td>
+        <td>{{data.Name}}</td>
+        <td>{{data.Age}}</td>
+        <td>{{data.Gender}}</td>
+        <td>{{data['Father/Husband']}}</td>
+        <td>{{data.Address}}</td>
+    </tr>
+</table>
+
+<div *ngIf="!usersData.length">
+    <b>
+        No Data matching, your search criteria!
+    </b>
+</div>
